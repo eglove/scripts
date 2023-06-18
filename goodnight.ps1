@@ -1,3 +1,4 @@
+node ~/Projects/ethang/eglove/git-history.mjs
 Update-Module PSWindowsUpdate
 Get-WindowsUpdate -MicrosoftUpdate -AcceptAll -Install
 #docker system prune -af
