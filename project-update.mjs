@@ -1,6 +1,7 @@
 import { execSync } from 'child_process'
 import prompt from 'prompt-sync'
 import chalk from 'chalk'
+import { simpleGit } from 'simple-git'
 
 const projectPrefix = '/Users/hello/Projects/ethang'
 
@@ -99,16 +100,20 @@ for (const projectKey in projects) {
     runCommand(`pnpm build`)
   }
 
-  runCommand('git add .')
+  const status = await simpleGit().status()
 
-  const commitSuccess = runCommandHandleFail('git commit -m "Version Bump"')
-  const pushSuccess = runCommandHandleFail('git push')
+  if (!status.isClean()) {
+    await simpleGit().add('.')
+    const commitMessage = prompt({})('Commit Message: ')
+    await simpleGit().commit(commitMessage)
+    const pushSuccess = runCommandHandleFail('git push')
 
-  if (project.publish && commitSuccess && pushSuccess) {
-    const input = prompt({})(chalk.yellow('Update Type (patch,minor,major): '))
-    runCommand(`npm version ${input}`)
+    if (project.publish && commitSuccess && pushSuccess) {
+      const input = prompt({})(chalk.yellow('Update Type (patch,minor,major): '))
+      runCommand(`npm version ${input}`)
 
-    runCommand('node build.mjs')
+      runCommand('node build.mjs')
+    }
   }
 }
 
