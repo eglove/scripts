@@ -53,6 +53,13 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+  },
+  sterettClient: {
+    path: `${projectPrefix}/sterett-client`,
+    updateDeps: true,
+    build: true,
+    lint: true,
+    publish: false,
   }
 }
 
