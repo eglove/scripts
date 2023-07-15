@@ -64,24 +64,15 @@ const projects = {
   }
 }
 
-const prompter = prompt({});
+const prompter = prompt({})
 
-const runCommand = (command) => {
-  execSync(command, {
-    stdio: 'inherit',
-  })
-}
-
-const runCommandHandleFail = (command) => {
-  try {
-    runCommand(command)
-    return true
-  } catch {
-    return false
+const runCommand = (command, condition) => {
+  if (condition === true) {
+    execSync(command, {
+      stdio: 'inherit',
+    })
   }
 }
-
-runCommand('pnpm prune')
 
 for (const projectKey in projects) {
   const project = projects[projectKey]
@@ -90,9 +81,8 @@ for (const projectKey in projects) {
 
   console.log(chalk.white.bgBlue(`Running for ${projectKey}`))
 
-  if (project.updateDeps) {
-    runCommand('pnpm up -i --latest')
-  }
+  runCommand('pnpm prune', true)
+  runCommand('pnpm up -i --latest', project.updateDeps)
 
   const status = await simpleGit().status()
 
@@ -100,13 +90,8 @@ for (const projectKey in projects) {
     continue
   }
 
-  if (project.lint) {
-    runCommand('pnpm lint')
-  }
-
-  if (project.build) {
-    runCommand(`pnpm build`)
-  }
+  runCommand('pnpm lint', project.lint)
+  runCommand(`pnpm build`, project.build)
 
   await simpleGit().add('.')
   const commitMessage = prompter('Commit Message: ')
@@ -115,9 +100,8 @@ for (const projectKey in projects) {
 
   if (project.publish) {
     const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
-    runCommand(`npm version ${input}`)
-
-    runCommand('node build.mjs')
+    runCommand(`npm version ${input}`, true)
+    runCommand('node build.mjs', true)
   }
 }
 
