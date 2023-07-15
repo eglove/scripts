@@ -64,6 +64,8 @@ const projects = {
   }
 }
 
+const prompter = prompt({});
+
 const runCommand = (command) => {
   execSync(command, {
     stdio: 'inherit',
@@ -95,7 +97,7 @@ for (const projectKey in projects) {
   const status = await simpleGit().status()
 
   if (status.isClean()) {
-    continue;
+    continue
   }
 
   if (project.lint) {
@@ -107,12 +109,12 @@ for (const projectKey in projects) {
   }
 
   await simpleGit().add('.')
-  const commitMessage = prompt({})('Commit Message: ')
+  const commitMessage = prompter('Commit Message: ')
   await simpleGit().commit(commitMessage)
-  const pushSuccess = runCommandHandleFail('git push')
+  await simpleGit().push()
 
-  if (project.publish && commitSuccess && pushSuccess) {
-    const input = prompt({})(chalk.yellow('Update Type (patch,minor,major): '))
+  if (project.publish) {
+    const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
     runCommand(`npm version ${input}`)
 
     runCommand('node build.mjs')
