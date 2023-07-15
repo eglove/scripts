@@ -83,7 +83,6 @@ for (const projectKey in projects) {
 
   runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
-  runCommand('pnpm dedupe')
 
   const status = await simpleGit().status()
 
@@ -91,6 +90,7 @@ for (const projectKey in projects) {
     continue
   }
 
+  runCommand('pnpm dedupe')
   runCommand('pnpm lint', project.lint)
   runCommand(`pnpm build`, project.build)
 
