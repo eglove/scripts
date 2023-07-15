@@ -92,6 +92,12 @@ for (const projectKey in projects) {
     runCommand('pnpm up -i --latest')
   }
 
+  const status = await simpleGit().status()
+
+  if (status.isClean()) {
+    break
+  }
+
   if (project.lint) {
     runCommand('pnpm lint')
   }
@@ -100,20 +106,16 @@ for (const projectKey in projects) {
     runCommand(`pnpm build`)
   }
 
-  const status = await simpleGit().status()
+  await simpleGit().add('.')
+  const commitMessage = prompt({})('Commit Message: ')
+  await simpleGit().commit(commitMessage)
+  const pushSuccess = runCommandHandleFail('git push')
 
-  if (!status.isClean()) {
-    await simpleGit().add('.')
-    const commitMessage = prompt({})('Commit Message: ')
-    await simpleGit().commit(commitMessage)
-    const pushSuccess = runCommandHandleFail('git push')
+  if (project.publish && commitSuccess && pushSuccess) {
+    const input = prompt({})(chalk.yellow('Update Type (patch,minor,major): '))
+    runCommand(`npm version ${input}`)
 
-    if (project.publish && commitSuccess && pushSuccess) {
-      const input = prompt({})(chalk.yellow('Update Type (patch,minor,major): '))
-      runCommand(`npm version ${input}`)
-
-      runCommand('node build.mjs')
-    }
+    runCommand('node build.mjs')
   }
 }
 
