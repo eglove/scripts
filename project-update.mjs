@@ -67,7 +67,7 @@ const projects = {
 const prompter = prompt({})
 
 const runCommand = (command, condition) => {
-  if (condition === true) {
+  if (condition !== false) {
     execSync(command, {
       stdio: 'inherit',
     })
@@ -81,8 +81,9 @@ for (const projectKey in projects) {
 
   console.log(chalk.white.bgBlue(`Running for ${projectKey}`))
 
-  runCommand('pnpm prune', true)
+  runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
+  runCommand('pnpm dedupe')
 
   const status = await simpleGit().status()
 
@@ -100,8 +101,8 @@ for (const projectKey in projects) {
 
   if (project.publish) {
     const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
-    runCommand(`npm version ${input}`, true)
-    runCommand('node build.mjs', true)
+    runCommand(`npm version ${input}`)
+    runCommand('node build.mjs')
   }
 }
 
