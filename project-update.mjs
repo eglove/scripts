@@ -46,6 +46,13 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+  },
+  sterettAdmin: {
+    path: `${projectPrefix}/sterett-admin`,
+    updateDeps: true,
+    build: true,
+    lint: true,
+    publish: false,
   }
 }
 
@@ -63,6 +70,8 @@ const runCommandHandleFail = (command) => {
     return false
   }
 }
+
+runCommand('pnpm prune')
 
 for (const projectKey in projects) {
   const project = projects[projectKey]
