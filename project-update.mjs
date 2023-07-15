@@ -95,7 +95,7 @@ for (const projectKey in projects) {
   const status = await simpleGit().status()
 
   if (status.isClean()) {
-    break
+    continue;
   }
 
   if (project.lint) {
