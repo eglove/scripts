@@ -12,6 +12,7 @@ const projects = {
     build: false,
     lint: false,
     publish: false,
+    branch: 'master',
   },
   eslintConfig: {
     path: `${projectPrefix}/eslint-config-ethang`,
@@ -19,6 +20,7 @@ const projects = {
     build: false,
     lint: true,
     publish: true,
+    branch: 'master',
   },
   hooks: {
     path: `${projectPrefix}/hooks`,
@@ -26,6 +28,7 @@ const projects = {
     build: false,
     lint: false,
     publish: true,
+    branch: 'main',
   },
   useForm: {
     path: `${projectPrefix}/use-form`,
@@ -33,6 +36,7 @@ const projects = {
     build: false,
     lint: false,
     publish: true,
+    branch: 'master',
   },
   blog: {
     path: `${projectPrefix}/blog`,
@@ -40,6 +44,7 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+    branch: 'master',
   },
   introspect: {
     path: `${projectPrefix}/introspect`,
@@ -47,6 +52,7 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+    branch: 'main',
   },
   sterettAdmin: {
     path: `${projectPrefix}/sterett-admin`,
@@ -54,6 +60,7 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+    branch: 'master',
   },
   sterettClient: {
     path: `${projectPrefix}/sterett-client`,
@@ -61,6 +68,7 @@ const projects = {
     build: true,
     lint: true,
     publish: false,
+    branch: 'master',
   }
 }
 
@@ -81,6 +89,7 @@ for (const projectKey in projects) {
 
   console.log(chalk.white.bgBlue(`Running for ${projectKey}`))
 
+  await simpleGit().checkout(project.branch);
   runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
 
