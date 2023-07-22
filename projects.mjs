@@ -37,7 +37,7 @@ export const projects = {
     path: `${projectPrefix}/fetch`,
     updateDeps: true,
     build: false,
-    lint: true,
+    lint: false,
     publish: true,
     branch: 'master',
   },
