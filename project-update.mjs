@@ -43,6 +43,10 @@ for (const projectKey in projects) {
     const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
     runCommand(`npm version ${input}`)
     runCommand('node build.mjs')
+
+    if (!status.isClean()) {
+      await simpleGit().push();
+    }
   }
 }
 
