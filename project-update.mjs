@@ -36,8 +36,7 @@ for (const projectKey in projects) {
   runCommand(`pnpm build`, project.build)
 
   await simpleGit().add('.')
-  const commitMessage = prompter('Commit Message: ')
-  await simpleGit().commit(commitMessage)
+  await simpleGit().commit('Version Bump')
   await simpleGit().push()
 
   if (project.publish) {
