@@ -33,6 +33,14 @@ export const projects = {
     publish: true,
     branch: 'master',
   },
+  fetch: {
+    path: `${projectPrefix}/fetch`,
+    updateDeps: true,
+    build: false,
+    lint: true,
+    publish: true,
+    branch: 'master',
+  },
   blog: {
     path: `${projectPrefix}/blog`,
     updateDeps: true,
