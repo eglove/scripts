@@ -1,5 +1,5 @@
-docker kill $(docker ps -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
+docker kill $(docker image ls -q)
+docker container rm $(docker container ls -a -q)
+docker image rm $(docker image ls -q)
 docker volume rm $(docker volume ls -q)
 docker network rm $(docker network ls -q)
