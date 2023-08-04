@@ -24,6 +24,7 @@ for (const projectKey in projects) {
   await simpleGit().checkout(project.branch);
   runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
+  runCommand('pnpm up -i -r --latest', project.updateDepsRecursive)
 
   const status = await simpleGit().status()
 
