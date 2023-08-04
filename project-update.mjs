@@ -7,7 +7,7 @@ import { projects } from './projects.mjs'
 const prompter = prompt({})
 
 const runCommand = (command, condition) => {
-  if (condition !== false) {
+  if (condition === true) {
   console.log(chalk.white.bgYellow(command))
     execSync(command, {
       stdio: 'inherit',
