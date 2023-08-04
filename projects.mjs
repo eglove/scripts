@@ -72,5 +72,14 @@ export const projects = {
     lint: true,
     publish: false,
     branch: 'master',
+  },
+  examples: {
+    path: `${projectPrefix}/examples`,
+    updateDeps: false,
+    updateDepsRecursive: true,
+    build: true,
+    lint: true,
+    publish: false,
+    branch: 'main',
   }
 }
