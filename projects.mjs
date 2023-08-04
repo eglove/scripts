@@ -4,6 +4,7 @@ export const projects = {
   scripts: {
     path: `${projectPrefix}/scripts`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: false,
     lint: false,
     publish: false,
@@ -12,6 +13,7 @@ export const projects = {
   eslintConfig: {
     path: `${projectPrefix}/eslint-config-ethang`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: false,
     lint: true,
     publish: true,
@@ -20,6 +22,7 @@ export const projects = {
   hooks: {
     path: `${projectPrefix}/hooks`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: false,
     lint: false,
     publish: true,
@@ -28,6 +31,7 @@ export const projects = {
   useForm: {
     path: `${projectPrefix}/use-form`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: false,
     lint: false,
     publish: true,
@@ -36,6 +40,7 @@ export const projects = {
   fetch: {
     path: `${projectPrefix}/fetch`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: false,
     lint: false,
     publish: true,
@@ -44,6 +49,7 @@ export const projects = {
   blog: {
     path: `${projectPrefix}/blog`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: true,
     lint: true,
     publish: false,
@@ -52,6 +58,7 @@ export const projects = {
   introspect: {
     path: `${projectPrefix}/introspect`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: true,
     lint: true,
     publish: false,
@@ -60,6 +67,7 @@ export const projects = {
   sterettAdmin: {
     path: `${projectPrefix}/sterett-admin`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: true,
     lint: true,
     publish: false,
@@ -68,6 +76,7 @@ export const projects = {
   sterettClient: {
     path: `${projectPrefix}/sterett-client`,
     updateDeps: true,
+    updateDepsRecursive: false,
     build: true,
     lint: true,
     publish: false,
