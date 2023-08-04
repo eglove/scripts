@@ -7,6 +7,7 @@ import { projects } from './projects.mjs'
 const prompter = prompt({})
 
 const runCommand = (command, condition) => {
+  console.log(chalk.white.bgYellow(command))
   if (condition !== false) {
     execSync(command, {
       stdio: 'inherit',
@@ -21,7 +22,7 @@ for (const projectKey in projects) {
 
   console.log(chalk.white.bgBlue(`Running for ${projectKey}`))
 
-  await simpleGit().checkout(project.branch);
+  await simpleGit().checkout(project.branch)
   runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
   runCommand('pnpm up -i -r --latest', project.updateDepsRecursive)
@@ -44,7 +45,7 @@ for (const projectKey in projects) {
     const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
     runCommand(`npm version ${input}`)
     runCommand('node build.mjs')
-    await simpleGit().push();
+    await simpleGit().push()
   }
 }
 
