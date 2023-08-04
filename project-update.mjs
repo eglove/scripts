@@ -8,7 +8,7 @@ const prompter = prompt({})
 
 const runCommand = (command, condition) => {
   console.log(chalk.white.bgYellow(command))
-  if (condition === true) {
+  if (condition !== false) {
     execSync(command, {
       stdio: 'inherit',
     })
