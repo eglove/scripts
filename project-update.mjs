@@ -6,8 +6,8 @@ import { projects } from './projects.mjs'
 
 const prompter = prompt({})
 
-const runCommand = (command, condition) => {
-  if (condition === true) {
+const runCommand = (command, condition = true) => {
+  if (condition === false) {
     execSync(command, {
       stdio: 'inherit',
     })
