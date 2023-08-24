@@ -46,6 +46,15 @@ export const projects = {
     publish: true,
     branch: 'master',
   },
+  url: {
+    path: `${projectPrefix}/url`,
+    updateDeps: true,
+    updateDepsRecursive: false,
+    build: false,
+    lint: true,
+    publish: true,
+    branch: 'master'
+  },
   blog: {
     path: `${projectPrefix}/blog`,
     updateDeps: true,
@@ -68,9 +77,9 @@ export const projects = {
     path: `${projectPrefix}/sterett-admin`,
     updateDeps: true,
     updateDepsRecursive: false,
-    build: true,
+    build: false,
     lint: true,
-    publish: false,
+    publish: true,
     branch: 'master',
   },
   sterettClient: {
