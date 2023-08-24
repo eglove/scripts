@@ -79,7 +79,7 @@ export const projects = {
     updateDepsRecursive: false,
     build: false,
     lint: true,
-    publish: true,
+    publish: false,
     branch: 'master',
   },
   sterettClient: {
