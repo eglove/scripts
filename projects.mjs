@@ -51,7 +51,7 @@ export const projects = {
     updateDeps: true,
     updateDepsRecursive: false,
     build: false,
-    lint: true,
+    lint: false,
     publish: true,
     branch: 'master'
   },
