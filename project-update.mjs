@@ -24,7 +24,7 @@ for (const projectKey in projects) {
   await simpleGit().checkout(project.branch)
   runCommand('pnpm prune')
   runCommand('pnpm up -i --latest', project.updateDeps)
-  runCommand('pnpm up -i -r --latest', project.updateDepsRecursive)
+  runCommand('pnpm up -i -r --latest', project.isTurboRepo)
 
   const status = await simpleGit().status()
 
@@ -33,6 +33,7 @@ for (const projectKey in projects) {
   }
 
   runCommand('pnpm dedupe')
+  runCommand('turbo daemon clean', project.isTurboRepo)
   runCommand('pnpm lint', project.lint)
   runCommand(`pnpm build`, project.build)
 
