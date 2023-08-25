@@ -46,15 +46,6 @@ export const projects = {
     publish: true,
     branch: 'master',
   },
-  url: {
-    path: `${projectPrefix}/url`,
-    updateDeps: true,
-    updateDepsRecursive: false,
-    build: false,
-    lint: false,
-    publish: true,
-    branch: 'master'
-  },
   blog: {
     path: `${projectPrefix}/blog`,
     updateDeps: true,
