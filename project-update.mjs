@@ -1,10 +1,8 @@
 import { execSync } from 'child_process'
-import prompt from 'prompt-sync'
 import chalk from 'chalk'
 import { simpleGit } from 'simple-git'
 import { projects } from './projects.mjs'
-
-const prompter = prompt({})
+import inquirer from 'inquirer'
 
 const runCommand = (command, condition = true) => {
   if (condition === true) {
@@ -42,8 +40,16 @@ for (const projectKey in projects) {
   await simpleGit().push()
 
   if (project.publish) {
-    const input = prompter(chalk.yellow('Update Type (patch,minor,major): '))
-    runCommand(`npm version ${input}`)
+    const { updateType } = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'updateType',
+        message: 'Update Type',
+        choices: ['patch', 'minor', 'major'],
+      }
+    ])
+
+    runCommand(`npm version ${updateType}`)
     runCommand('node build.mjs')
     await simpleGit().push()
   }
