@@ -9,4 +9,4 @@ choco upgrade all
 nvm install latest
 nvm use latest
 npm i -g npm pnpm yarn
-pnpm i -g @sanity/cli empty-trash-cli jest nx trash-cli turbo typescript
+pnpm i -g @sanity/cli prettier typescript gatsby-cli
