@@ -46,8 +46,8 @@ export const projects = {
     publish: true,
     branch: 'master',
   },
-  blog: {
-    path: `${projectPrefix}/blog`,
+  website: {
+    path: `${projectPrefix}/website`,
     updateDeps: true,
     isTurboRepo: false,
     build: true,
