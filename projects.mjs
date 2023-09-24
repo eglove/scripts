@@ -51,7 +51,7 @@ export const projects = {
     updateDeps: true,
     isTurboRepo: false,
     build: true,
-    lint: true,
+    lint: false,
     publish: false,
     branch: 'master',
   },
