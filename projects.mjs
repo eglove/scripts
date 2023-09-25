@@ -59,7 +59,7 @@ export const projects = {
     path: `${projectPrefix}/introspect`,
     updateDeps: true,
     isTurboRepo: false,
-    build: true,
+    build: false,
     lint: true,
     publish: false,
     branch: 'main',
