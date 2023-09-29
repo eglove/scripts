@@ -73,8 +73,8 @@ export const projects = {
     publish: false,
     branch: 'master',
   },
-  sterettClient: {
-    path: `${projectPrefix}/sterett-client`,
+  sterett: {
+    path: `${projectPrefix}/sterett`,
     updateDeps: true,
     isTurboRepo: false,
     build: true,
