@@ -5,6 +5,7 @@ import { projects } from './projects.mjs'
 import inquirer from 'inquirer'
 
 const runCommand = (command) => {
+  console.log(chalk.greenBright(command))
   execSync(command, {
     stdio: 'inherit',
   })
