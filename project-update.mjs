@@ -20,9 +20,12 @@ for (const projectKey in projects) {
   console.log(chalk.white.bgBlue(`Running for ${projectKey}`))
 
   await simpleGit().checkout(project.branch)
-  runCommand('pnpm prune')
-  runCommand('pnpm up -i --latest', project.updateDeps)
-  runCommand('pnpm up -i -r --latest', project.isTurboRepo)
+
+  if (project.dependencyScripts?.length > 0) {
+    for (const script of project.dependencyScripts) {
+      runCommand(script);
+    }
+  }
 
   const status = await simpleGit().status()
 
@@ -30,11 +33,11 @@ for (const projectKey in projects) {
     continue
   }
 
-  runCommand('pnpm dedupe')
-  runCommand('turbo daemon clean', project.isTurboRepo)
-  runCommand('pnpm lint', project.lint)
-  runCommand('pnpm test', project.test)
-  runCommand(`pnpm build`, project.build)
+  if (project.postDependencyScripts?.length > 0) {
+    for (const script of project.postDependencyScripts) {
+      runCommand(script);
+    }
+  }
 
   await simpleGit().add('.')
   await simpleGit().commit('Version Bump')
