@@ -12,12 +12,13 @@ const runCommand = (command) => {
 }
 
 let index = 0;
+const length = Object.keys(projects).length;
 for (const projectKey in projects) {
   const project = projects[projectKey]
 
   process.chdir(project.path)
 
-  console.log(chalk.white.bgBlue(`(${++index}/${Object.keys(projects).length}) Running for ${projectKey}`))
+  console.log(chalk.white.bgBlue(`(${++index}/${length}) Running for ${projectKey}`))
 
   await simpleGit().checkout(project.branch)
 
