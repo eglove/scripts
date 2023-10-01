@@ -1,5 +1,15 @@
 const projectPrefix = '/Users/hello/Projects/ethang'
 
+const scriptStrings = new Map([
+  ['updateDependencies', 'pnpm up -i --latest'],
+  ['recursiveUpdateDependencies', 'pnpm up -i -r --latest'],
+  ['lint', 'pnpm lint'],
+  ['test', 'pnpm test'],
+  ['build', 'pnpm build'],
+  ['branch', 'branch'],
+  ['publish', true],
+]);
+
 export const projects = {
   scripts: {
     path: `${projectPrefix}/scripts`,
@@ -69,7 +79,7 @@ export const projects = {
     lint: true,
     publish: false,
     test: true,
-    branch: 'main',
+    branch: 'master',
   },
   sterettAdmin: {
     path: `${projectPrefix}/sterett-admin`,
