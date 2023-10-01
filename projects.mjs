@@ -8,6 +8,7 @@ export const projects = {
     build: false,
     lint: false,
     publish: false,
+    test: false,
     branch: 'master',
   },
   eslintConfig: {
@@ -17,6 +18,7 @@ export const projects = {
     build: false,
     lint: true,
     publish: true,
+    test: false,
     branch: 'master',
   },
   hooks: {
@@ -26,6 +28,7 @@ export const projects = {
     build: false,
     lint: false,
     publish: true,
+    test: false,
     branch: 'main',
   },
   useForm: {
@@ -35,6 +38,7 @@ export const projects = {
     build: false,
     lint: false,
     publish: true,
+    test: false,
     branch: 'master',
   },
   fetch: {
@@ -44,6 +48,7 @@ export const projects = {
     build: false,
     lint: false,
     publish: true,
+    test: false,
     branch: 'master',
   },
   website: {
@@ -53,15 +58,17 @@ export const projects = {
     build: true,
     lint: true,
     publish: false,
+    test: false,
     branch: 'master',
   },
   introspect: {
-    path: `${projectPrefix}/introspect`,
+    path: `${projectPrefix}/introspect-2`,
     updateDeps: true,
     isTurboRepo: false,
     build: false,
     lint: true,
     publish: false,
+    test: true,
     branch: 'main',
   },
   sterettAdmin: {
@@ -71,6 +78,7 @@ export const projects = {
     build: false,
     lint: true,
     publish: false,
+    test: false,
     branch: 'master',
   },
   sterett: {
@@ -80,6 +88,7 @@ export const projects = {
     build: true,
     lint: true,
     publish: false,
+    test: false,
     branch: 'master',
   },
   examples: {
@@ -89,6 +98,7 @@ export const projects = {
     build: true,
     lint: true,
     publish: false,
+    test: false,
     branch: 'main',
   }
 }

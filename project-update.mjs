@@ -33,6 +33,7 @@ for (const projectKey in projects) {
   runCommand('pnpm dedupe')
   runCommand('turbo daemon clean', project.isTurboRepo)
   runCommand('pnpm lint', project.lint)
+  runCommand('pnpm test', project.test)
   runCommand(`pnpm build`, project.build)
 
   await simpleGit().add('.')
