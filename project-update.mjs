@@ -4,12 +4,10 @@ import { simpleGit } from 'simple-git'
 import { projects } from './projects.mjs'
 import inquirer from 'inquirer'
 
-const runCommand = (command, condition = true) => {
-  if (condition === true) {
-    execSync(command, {
-      stdio: 'inherit',
-    })
-  }
+const runCommand = (command) => {
+  execSync(command, {
+    stdio: 'inherit',
+  })
 }
 
 for (const projectKey in projects) {
@@ -23,7 +21,7 @@ for (const projectKey in projects) {
 
   if (project.dependencyScripts?.length > 0) {
     for (const script of project.dependencyScripts) {
-      runCommand(script);
+      runCommand(script)
     }
   }
 
@@ -35,7 +33,7 @@ for (const projectKey in projects) {
 
   if (project.postDependencyScripts?.length > 0) {
     for (const script of project.postDependencyScripts) {
-      runCommand(script);
+      runCommand(script)
     }
   }
 
