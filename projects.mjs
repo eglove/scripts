@@ -19,25 +19,25 @@ export const projects = {
     path: `${projectPrefix}/eslint-config-ethang`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
-    postDependencyScripts: [DEDUPE, LINT],
+    postDependencyScripts: [DEDUPE, LINT, BUILD],
     publish: true,
   },
   hooks: {
     path: `${projectPrefix}/hooks`,
     branch: 'main',
-    dependencyScripts: [UPDATE, PRUNE],
+    dependencyScripts: [UPDATE, PRUNE, BUILD],
     publish: true,
   },
   useForm: {
     path: `${projectPrefix}/use-form`,
     branch: 'master',
-    dependencyScripts: [UPDATE, PRUNE],
+    dependencyScripts: [UPDATE, PRUNE, BUILD],
     publish: true,
   },
   fetch: {
     path: `${projectPrefix}/fetch`,
     branch: 'master',
-    dependencyScripts: [UPDATE, PRUNE],
+    dependencyScripts: [UPDATE, PRUNE, BUILD],
     publish: true,
   },
   website: {
@@ -56,7 +56,7 @@ export const projects = {
     path: `${projectPrefix}/sterett-admin`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
-    postDependencyScripts: [DEDUPE, LINT],
+    postDependencyScripts: [DEDUPE, LINT], BUILD,
   },
   sterett: {
     path: `${projectPrefix}/sterett`,
