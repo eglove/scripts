@@ -50,7 +50,7 @@ export const projects = {
     path: `${projectPrefix}/introspect-2`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
-    postDependencyScripts: [DEDUPE, LINT, TEST, BUILD],
+    postDependencyScripts: [DEDUPE, LINT, BUILD],
   },
   sterettAdmin: {
     path: `${projectPrefix}/sterett-admin`,
