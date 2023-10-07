@@ -38,6 +38,7 @@ export const projects = {
     path: `${projectPrefix}/util`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
+    postDependencyScripts: [DEDUPE, LINT],
     publish: true,
   },
   fetch: {
@@ -56,7 +57,7 @@ export const projects = {
     path: `${projectPrefix}/introspect-2`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
-    postDependencyScripts: [DEDUPE, LINT, BUILD],
+    postDependencyScripts: [DEDUPE, LINT, TEST, BUILD],
   },
   sterettAdmin: {
     path: `${projectPrefix}/sterett-admin`,
