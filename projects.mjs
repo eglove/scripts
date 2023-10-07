@@ -34,6 +34,12 @@ export const projects = {
     dependencyScripts: [UPDATE, PRUNE],
     publish: true,
   },
+  util: {
+    path: `${projectPrefix}/util`,
+    branch: 'master',
+    dependencyScripts: [UPDATE, PRUNE],
+    publish: true,
+  },
   fetch: {
     path: `${projectPrefix}/fetch`,
     branch: 'master',
