@@ -6,7 +6,7 @@ vs update --all
 choco upgrade all
 
 # Node Update
-nvm install latest
-nvm use latest
+nvm install 20
+nvm use 20
 npm i -g npm pnpm yarn
 pnpm i -g @sanity/cli prettier typescript gatsby-cli
