@@ -55,7 +55,7 @@ export const projects = {
   },
   introspect: {
     path: `${projectPrefix}/introspect-2`,
-    branch: 'master',
+    branch: 'develop',
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT, BUILD],
   },
