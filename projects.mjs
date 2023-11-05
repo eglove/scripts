@@ -54,7 +54,7 @@ export const projects = {
     postDependencyScripts: [DEDUPE, LINT, BUILD],
   },
   introspect: {
-    path: `${projectPrefix}/introspect-2`,
+    path: `${projectPrefix}/introspect`,
     branch: 'develop',
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT, BUILD],
