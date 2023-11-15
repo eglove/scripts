@@ -53,6 +53,12 @@ export const projects = {
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT, BUILD],
   },
+  websiteAdmin: {
+    path: `${projectPrefix}/ethang-admin`,
+    branch: 'main',
+    dependencyScripts: [UPDATE, PRUNE],
+    postDependencyScripts: [DEDUPE, LINT, BUILD],
+  },
   introspect: {
     path: `${projectPrefix}/introspect`,
     branch: 'master',
