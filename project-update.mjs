@@ -17,7 +17,7 @@ const runCommand = (command) => {
 
 const gitPush = async () => {
   await simpleGit().push()
-  const remote = await simpleGit().listRemote();
+  const remote = await simpleGit().listRemote(['--get-url']);
   console.log(chalk.blueBright(`Published to ${remote}`))
 }
 
