@@ -66,9 +66,9 @@ export const projects = {
     esBuild: {
       bundle: true,
       minify: true,
-      outdir: 'dist',
+      outdir: `${projectPrefix}/util/dist`,
       format: 'esm',
-      entryPoints: ['src/*'],
+      entryPoints: [`${projectPrefix}/util/src/*`],
     }
   },
   fetch: {
