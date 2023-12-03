@@ -8,7 +8,6 @@ const TURBO_CLEAN = 'turbo daemon clean';
 const LINT = 'pnpm lint';
 const TEST = 'pnpm test';
 const BUILD = 'pnpm build';
-const PUBLISH = 'npm publish --access public';
 
 export const projects = {
   scripts: {

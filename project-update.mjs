@@ -22,7 +22,7 @@ for (const projectKey in projects) {
 
   process.chdir(project.path)
 
-  console.log(chalk.white.bgBlue(`(${++index}/${length}) Running for ${projectKey} at ${project.path}`))
+  console.log(chalk.white.bgBlue(`(${++index}/${length}) Running for ${projectKey}`))
 
   await simpleGit().checkout(project.branch)
 
@@ -34,6 +34,7 @@ for (const projectKey in projects) {
 
   const status = await simpleGit().status()
 
+  console.log('clean', status.isClean())
   if (status.isClean()) {
     continue
   }
@@ -78,7 +79,6 @@ for (const projectKey in projects) {
 
       if (project.buildTsConfig) {
         const tsConfigString = fs.readFileSync('tsconfig.json', {encoding: 'utf8'})
-        console.log(tsConfigString)
         const originalTsConfig = JSON.parse(tsConfigString)
 
         const merged = deepMerge(originalTsConfig, project.buildTsConfig)
