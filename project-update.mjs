@@ -15,6 +15,12 @@ const runCommand = (command) => {
   })
 }
 
+const gitPush = async () => {
+  await simpleGit().push()
+  const remote = await simpleGit().listRemote();
+  runCommand(`Published to ${remote}`)
+}
+
 let index = 0;
 const length = Object.keys(projects).length;
 for (const projectKey in projects) {
@@ -34,7 +40,6 @@ for (const projectKey in projects) {
 
   const status = await simpleGit().status()
 
-  console.log('clean', status.isClean())
   if (status.isClean()) {
     continue
   }
@@ -47,7 +52,7 @@ for (const projectKey in projects) {
 
   await simpleGit().add('.')
   await simpleGit().commit('Version Bump')
-  await simpleGit().push()
+  await gitPush();
 
   if (project.writePeers) {
     const packageJson = fs.readFileSync('package.json', { encoding: 'utf8' })
@@ -59,7 +64,7 @@ for (const projectKey in projects) {
 
     await simpleGit().add('.')
     await simpleGit().commit('Peer Dependency Update')
-    await simpleGit().push()
+    await gitPush()
   }
 
   if (project.publish) {
@@ -100,7 +105,7 @@ for (const projectKey in projects) {
       runCommand('npm publish --access public')
     }
 
-    await simpleGit().push()
+    await gitPush()
   }
 }
 
