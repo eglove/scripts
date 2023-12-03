@@ -8,6 +8,7 @@ const TURBO_CLEAN = 'turbo daemon clean';
 const LINT = 'pnpm lint';
 const TEST = 'pnpm test';
 const BUILD = 'pnpm build';
+const PUBLISH = 'npm publish --access public';
 
 export const projects = {
   scripts: {
@@ -21,18 +22,32 @@ export const projects = {
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT],
     publish: true,
+    writePeers: true,
   },
   hooks: {
     path: `${projectPrefix}/hooks`,
     branch: 'main',
     dependencyScripts: [UPDATE, PRUNE],
     publish: true,
+    writePeers: true,
+    publishDirectory: 'dist',
+    tsConfig: 'tsconfig.json'
   },
   useForm: {
     path: `${projectPrefix}/use-form`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
     publish: true,
+    writePeers: true,
+    publishDirectory: 'dist',
+    tsConfig: 'tsconfig.json',
+    esBuild: {
+      bundle: false,
+      minify: true,
+      outdir: 'dist',
+      format: 'esm',
+      entryPoints: ['src/*']
+    }
   },
   util: {
     path: `${projectPrefix}/util`,
@@ -40,12 +55,36 @@ export const projects = {
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT],
     publish: true,
+    publishDirectory: 'dist',
+    tsConfig: 'tsconfig.json',
+    buildTsConfig: {
+      include: ['src'],
+      compilerOptions: {
+        emitDeclarationOnly: true,
+      }
+    },
+    esBuild: {
+      bundle: true,
+      minify: true,
+      outdir: 'dist',
+      format: 'esm',
+      entryPoints: ['src/*'],
+    }
   },
   fetch: {
     path: `${projectPrefix}/fetch`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
     publish: true,
+    writePeers: true,
+    publishDirectory: 'dist',
+    tsConfig: 'tsconfig.json',
+    buildTsConfig: {
+      include: ['src/**/*'],
+      compilerOptions: {
+        emitDeclarationOnly: true,
+      }
+    }
   },
   website: {
     path: `${projectPrefix}/website-remix`,
