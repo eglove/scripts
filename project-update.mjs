@@ -19,6 +19,6 @@ const projects = [
 ];
 
 for (const project of projects) {
-  console.log(`node ${projectPrefix}/${project}/build.mjs`);
-  execSync(`node ${projectPrefix}/${project}/build.mjs`);
+  execSync(`cd ${projectPrefix}/${project}`);
+  execSync(`node build.mjs`);
 }
