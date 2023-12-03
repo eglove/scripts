@@ -78,6 +78,7 @@ for (const projectKey in projects) {
 
       if (project.buildTsConfig) {
         const tsConfigString = fs.readFileSync('tsconfig.json', {encoding: 'utf8'})
+        console.log(tsConfigString)
         const originalTsConfig = JSON.parse(tsConfigString)
 
         const merged = deepMerge(originalTsConfig, project.buildTsConfig)
