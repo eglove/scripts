@@ -48,7 +48,7 @@ export const projects = {
     publish: true,
   },
   website: {
-    path: `${projectPrefix}/website`,
+    path: `${projectPrefix}/website-remix`,
     branch: 'master',
     dependencyScripts: [UPDATE, PRUNE],
     postDependencyScripts: [DEDUPE, LINT, BUILD],
