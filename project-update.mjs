@@ -19,6 +19,7 @@ const projects = [
 ];
 
 for (const project of projects) {
-  execSync(`cd ${projectPrefix}/${project}`);
-  execSync(`node build.mjs`);
+  execSync(`cd ${projectPrefix}/${project} && node build.mjs`, {
+    stdio: "inherit",
+  });
 }
