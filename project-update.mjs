@@ -18,7 +18,7 @@ const runCommand = (command) => {
 const gitPush = async () => {
   await simpleGit().push()
   const remote = await simpleGit().listRemote();
-  runCommand(`Published to ${remote}`)
+  console.log(chalk.blueBright(`Published to ${remote}`))
 }
 
 let index = 0;
