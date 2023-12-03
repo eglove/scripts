@@ -22,7 +22,7 @@ for (const projectKey in projects) {
 
   process.chdir(project.path)
 
-  console.log(chalk.white.bgBlue(`(${++index}/${length}) Running for ${projectKey}`))
+  console.log(chalk.white.bgBlue(`(${++index}/${length}) Running for ${projectKey} at ${project.path}`))
 
   await simpleGit().checkout(project.branch)
 
