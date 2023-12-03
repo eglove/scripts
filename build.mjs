@@ -4,4 +4,5 @@ await projectBuilder("scripts", "master", {
   preVersionBumpScripts: ["UPDATE", "PRUNE"],
   postVersionBumpScripts: ["DEDUPE", "LINT"],
   isIgnoringBuild: true,
+  isIgnoringPeerDependencies: true,
 });
