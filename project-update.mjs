@@ -14,7 +14,7 @@ const projects = [
   "ethang-admin",
   "introspect",
   "sterett-admin",
-  "sterett",
+  "sterett-qwik",
   "examples",
 ];
 
