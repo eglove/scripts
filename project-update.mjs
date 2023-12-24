@@ -12,7 +12,6 @@ const projects = [
   "fetch",
   "website-remix",
   "ethang-admin",
-  "introspect",
   "sterett-admin",
   "sterett-qwik",
   "examples",
