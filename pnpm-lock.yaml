@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   "@ethang/project-builder":
-    specifier: ^1.1.23
-    version: 1.1.23(@ethang/util@3.1.1)(chalk@5.3.0)(inquirer@9.2.14)(rimraf@5.0.5)(simple-git@3.22.0)(tsup@8.0.2)(typescript@5.3.3)
+    specifier: ^1.1.24
+    version: 1.1.24(@ethang/util@3.1.1)(chalk@5.3.0)(inquirer@9.2.14)(rimraf@5.0.5)(simple-git@3.22.0)(tsup@8.0.2)(typescript@5.3.3)
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -289,10 +289,10 @@ packages:
     dev: true
     optional: true
 
-  /@ethang/project-builder@1.1.23(@ethang/util@3.1.1)(chalk@5.3.0)(inquirer@9.2.14)(rimraf@5.0.5)(simple-git@3.22.0)(tsup@8.0.2)(typescript@5.3.3):
+  /@ethang/project-builder@1.1.24(@ethang/util@3.1.1)(chalk@5.3.0)(inquirer@9.2.14)(rimraf@5.0.5)(simple-git@3.22.0)(tsup@8.0.2)(typescript@5.3.3):
     resolution:
       {
-        integrity: sha512-01OTymdGwojfpLrp0ttNx0dNxgjySrl/KfKJWgA+WXlRosMo5jl03g5F/n3otJaH/mII0QQ8Fb109GO9pAEMHg==,
+        integrity: sha512-1be+3YyAFHPc+xbkwmoqPDan/buS7FPSM1uax368wAbeHtEdDAcTXwwDayBjNk3X3GsC2zX5RhmVr1f0czWiKw==,
       }
     peerDependencies:
       "@ethang/util": ^3.1.1
