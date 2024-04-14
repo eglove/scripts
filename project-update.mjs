@@ -20,3 +20,7 @@ for (const project of projects) {
     stdio: "inherit",
   });
 }
+
+execSync("pnpm store prune", {
+  stdio: "inherit",
+});
