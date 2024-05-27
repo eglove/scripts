@@ -1,1 +1,1 @@
-volta install node npm pnpm yarn @sanity/cli prettier typescript turbo
+npm i -g pnpm yarn
