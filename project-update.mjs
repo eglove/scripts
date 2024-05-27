@@ -8,7 +8,7 @@ const projects = [
   "eslint-config-ethang",
   "toolbelt",
   "hooks",
-  "website-remix",
+  "ethang-astro",
   "ethang-admin",
   "sterett-admin",
   "sterett-qwik",
