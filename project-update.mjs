@@ -9,7 +9,6 @@ const projects = [
   "toolbelt",
   "hooks",
   "ethang-astro",
-  "ethang-admin",
   "sterett-admin",
   "sterett-qwik",
   "examples",
