@@ -6,4 +6,3 @@ choco upgrade all
 
 update-node.ps1
 
-project-update.ps1
