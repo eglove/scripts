@@ -9,10 +9,10 @@ importers:
     devDependencies:
       "@ethang/project-builder":
         specifier: ^1.1.38
-        version: 1.1.38(chalk@5.3.0)(inquirer@9.2.22)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.24.0)(tsup@8.0.2(typescript@5.4.5))(typescript@5.4.5)
+        version: 1.1.38(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.24.0)(tsup@8.0.2(typescript@5.4.5))(typescript@5.4.5)
       prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
+        specifier: ^3.3.0
+        version: 3.3.0
 
 packages:
   "@esbuild/aix-ppc64@0.19.12":
@@ -236,10 +236,10 @@ packages:
       tsup: ^8.0.2
       typescript: ^5.4.5
 
-  "@inquirer/figures@1.0.2":
+  "@inquirer/figures@1.0.3":
     resolution:
       {
-        integrity: sha512-4F1MBwVr3c/m4bAUef6LgkvBfSjzwH+OfldgHqcuacWwSUetFebM2wi58WfG9uk1rR98U6GwLed4asLJbwdV5w==,
+        integrity: sha512-ErXXzENMH5pJt5/ssXV0DfWUZqly8nGzf0UcBV9xTnP+KyffE2mqyxIMBrZ8ijQck2nU0TQm40EQB53YreyWHw==,
       }
     engines: { node: ">=18" }
 
@@ -563,10 +563,10 @@ packages:
         integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==,
       }
 
-  bundle-require@4.1.0:
+  bundle-require@4.2.1:
     resolution:
       {
-        integrity: sha512-FeArRFM+ziGkRViKRnSTbHZc35dgmR9yNog05Kn0+ItI59pOAISGvnnIwW1WgFZQW59IxD9QpJnUPkdIPfZuXg==,
+        integrity: sha512-7Q/6vkyYAwOmQNRw75x+4yRtZCZJXUDmHHlFdkiV0wgv/reNjtJwpu1jPJ0w2kbEpIM0uoKI3S4/f39dU7AjSA==,
       }
     engines: { node: ^12.20.0 || ^14.13.1 || >=16.0.0 }
     peerDependencies:
@@ -668,10 +668,10 @@ packages:
       }
     engines: { node: ">= 8" }
 
-  debug@4.3.4:
+  debug@4.3.5:
     resolution:
       {
-        integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==,
+        integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==,
       }
     engines: { node: ">=6.0" }
     peerDependencies:
@@ -904,10 +904,10 @@ packages:
         integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==,
       }
 
-  inquirer@9.2.22:
+  inquirer@9.2.23:
     resolution:
       {
-        integrity: sha512-SqLLa/Oe5rZUagTR9z+Zd6izyatHglbmbvVofo1KzuVB54YHleWzeHNLoR7FOICGOeQSqeLh1cordb3MzhGcEw==,
+        integrity: sha512-kod5s+FBPIDM2xiy9fu+6wdU/SkK5le5GS9lh4FEBjBHqiMgD9lLFbCbuqFNAjNL2ZOy9Wd9F694IOzN9pZHBA==,
       }
     engines: { node: ">=18" }
 
@@ -1185,10 +1185,10 @@ packages:
       ts-node:
         optional: true
 
-  prettier@3.2.5:
+  prettier@3.3.0:
     resolution:
       {
-        integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==,
+        integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==,
       }
     engines: { node: ">=14" }
     hasBin: true
@@ -1540,10 +1540,10 @@ packages:
       }
     engines: { node: ">=12" }
 
-  yaml@2.4.2:
+  yaml@2.4.3:
     resolution:
       {
-        integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==,
+        integrity: sha512-sntgmxj8o7DE7g/Qi60cqpLBA3HG3STcDA0kO+WfB05jEKhZMbY7umNm2rBpQvsmZ16/lPXCJGW2672dgOUkrg==,
       }
     engines: { node: ">= 14" }
     hasBin: true
@@ -1618,17 +1618,17 @@ snapshots:
   "@esbuild/win32-x64@0.19.12":
     optional: true
 
-  "@ethang/project-builder@1.1.38(chalk@5.3.0)(inquirer@9.2.22)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.24.0)(tsup@8.0.2(typescript@5.4.5))(typescript@5.4.5)":
+  "@ethang/project-builder@1.1.38(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.24.0)(tsup@8.0.2(typescript@5.4.5))(typescript@5.4.5)":
     dependencies:
       chalk: 5.3.0
-      inquirer: 9.2.22
+      inquirer: 9.2.23
       lodash: 4.17.21
       rimraf: 5.0.7
       simple-git: 3.24.0
       tsup: 8.0.2(typescript@5.4.5)
       typescript: 5.4.5
 
-  "@inquirer/figures@1.0.2": {}
+  "@inquirer/figures@1.0.3": {}
 
   "@isaacs/cliui@8.0.2":
     dependencies:
@@ -1658,7 +1658,7 @@ snapshots:
 
   "@kwsites/file-exists@1.1.1":
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
 
@@ -1781,7 +1781,7 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  bundle-require@4.1.0(esbuild@0.19.12):
+  bundle-require@4.2.1(esbuild@0.19.12):
     dependencies:
       esbuild: 0.19.12
       load-tsconfig: 0.2.5
@@ -1841,7 +1841,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  debug@4.3.4:
+  debug@4.3.5:
     dependencies:
       ms: 2.1.2
 
@@ -2002,9 +2002,9 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer@9.2.22:
+  inquirer@9.2.23:
     dependencies:
-      "@inquirer/figures": 1.0.2
+      "@inquirer/figures": 1.0.3
       "@ljharb/through": 2.3.13
       ansi-escapes: 4.3.2
       chalk: 5.3.0
@@ -2136,9 +2136,9 @@ snapshots:
   postcss-load-config@4.0.2:
     dependencies:
       lilconfig: 3.1.1
-      yaml: 2.4.2
+      yaml: 2.4.3
 
-  prettier@3.2.5: {}
+  prettier@3.3.0: {}
 
   punycode@2.3.1: {}
 
@@ -2226,7 +2226,7 @@ snapshots:
     dependencies:
       "@kwsites/file-exists": 1.1.1
       "@kwsites/promise-deferred": 1.1.1
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
 
@@ -2304,10 +2304,10 @@ snapshots:
 
   tsup@8.0.2(typescript@5.4.5):
     dependencies:
-      bundle-require: 4.1.0(esbuild@0.19.12)
+      bundle-require: 4.2.1(esbuild@0.19.12)
       cac: 6.7.14
       chokidar: 3.6.0
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.19.12
       execa: 5.1.1
       globby: 11.1.0
@@ -2364,4 +2364,4 @@ snapshots:
       string-width: 5.1.2
       strip-ansi: 7.1.0
 
-  yaml@2.4.2: {}
+  yaml@2.4.3: {}
