@@ -11,7 +11,6 @@ const projects = [
   "ethang-astro",
   "sterett-admin",
   "sterett-qwik",
-  "examples",
 ];
 
 for (const project of projects) {
