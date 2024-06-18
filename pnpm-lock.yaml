@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@ethang/project-builder":
-        specifier: ^1.1.39
-        version: 1.1.39(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.4.5))(typescript@5.4.5)
+        specifier: ^1.1.40
+        version: 1.1.40(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.4.5))(typescript@5.4.5)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -222,17 +222,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@ethang/project-builder@1.1.39":
+  "@ethang/project-builder@1.1.40":
     resolution:
       {
-        integrity: sha512-RjslcwdqYjywy5ccZ+BoPp+sDkjTi1KoZTb5l4wZTPPVtNp3qfmsQT8/Lxl8LtrumSMt8/bo7d9m6FrnLTEdYQ==,
+        integrity: sha512-V2G/N+ANYDKSSnt7dVeYD9kDbiOKjfWx92/D2RgeUzFjsBki361ZNEIWQqyw1h+D/aV5uLkpJ59qnNX0M5c/5g==,
       }
     peerDependencies:
       chalk: ^5.3.0
       inquirer: ^9.2.23
       lodash: ^4.17.21
       rimraf: ^5.0.7
-      simple-git: ^3.24.0
+      simple-git: ^3.25.0
       tsup: ^8.1.0
       typescript: ^5.4.5
 
@@ -1618,7 +1618,7 @@ snapshots:
   "@esbuild/win32-x64@0.21.5":
     optional: true
 
-  "@ethang/project-builder@1.1.39(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.4.5))(typescript@5.4.5)":
+  "@ethang/project-builder@1.1.40(chalk@5.3.0)(inquirer@9.2.23)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.4.5))(typescript@5.4.5)":
     dependencies:
       chalk: 5.3.0
       inquirer: 9.2.23
