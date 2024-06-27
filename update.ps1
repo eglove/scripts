@@ -4,5 +4,5 @@ vs update --all
 
 choco upgrade all
 
-update-node.ps1
+update-node
 
