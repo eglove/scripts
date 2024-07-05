@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@ethang/project-builder":
-        specifier: ^1.1.41
-        version: 1.1.41(chalk@5.3.0)(inquirer@9.3.1)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.2))(typescript@5.5.2)
+        specifier: ^1.1.42
+        version: 1.1.42(chalk@5.3.0)(inquirer@9.3.4)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -222,19 +222,19 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@ethang/project-builder@1.1.41":
+  "@ethang/project-builder@1.1.42":
     resolution:
       {
-        integrity: sha512-pPJtx2kOQO0Vpgd1VgsuIWCyv5OeejL7FqVEFIau6jU3rRtTl2hJ+43wsUI5/lT1kUDtvfIGXXjWrxqF0K3JGg==,
+        integrity: sha512-gmBTI7p+1YQgNKa3B0qmU/eKKHhoewcOGZRihCMULTZ4iBLNUEsHtENvZ2/waF6CT0hFEioiUd0pIJNQhtdoBg==,
       }
     peerDependencies:
       chalk: ^5.3.0
-      inquirer: ^9.3.1
+      inquirer: ^9.3.4
       lodash: ^4.17.21
       rimraf: ^5.0.7
       simple-git: ^3.25.0
       tsup: ^8.1.0
-      typescript: ^5.5.2
+      typescript: ^5.5.3
 
   "@inquirer/figures@1.0.3":
     resolution:
@@ -823,10 +823,10 @@ packages:
         integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==,
       }
 
-  inquirer@9.3.1:
+  inquirer@9.3.4:
     resolution:
       {
-        integrity: sha512-A5IdVr1I04XqPlwrGgTJMKmzRg5ropqNpSeqo0vj1ZmluSCNSFaPZz4eazdPrhVcZfej7fCEYvD2NYa1KjkTJA==,
+        integrity: sha512-Hp6meNSDzp+Oc9JNUUlYsK81dxaPrrBRa7H/s3+yebCDRJe4UNKYSkEUZoIcuKJjNipBLPKsuc7BvO6tLzo/KA==,
       }
     engines: { node: ">=18" }
 
@@ -1080,12 +1080,6 @@ packages:
         integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==,
       }
     engines: { node: ">=8" }
-
-  picocolors@1.0.1:
-    resolution:
-      {
-        integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==,
-      }
 
   picomatch@2.3.1:
     resolution:
@@ -1403,10 +1397,10 @@ packages:
       }
     engines: { node: ">=10" }
 
-  typescript@5.5.2:
+  typescript@5.5.3:
     resolution:
       {
-        integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==,
+        integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==,
       }
     engines: { node: ">=14.17" }
     hasBin: true
@@ -1471,6 +1465,13 @@ packages:
       }
     engines: { node: ">= 14" }
     hasBin: true
+
+  yoctocolors-cjs@2.1.2:
+    resolution:
+      {
+        integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==,
+      }
+    engines: { node: ">=18" }
 
 snapshots:
   "@esbuild/aix-ppc64@0.21.5":
@@ -1542,15 +1543,15 @@ snapshots:
   "@esbuild/win32-x64@0.21.5":
     optional: true
 
-  "@ethang/project-builder@1.1.41(chalk@5.3.0)(inquirer@9.3.1)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.2))(typescript@5.5.2)":
+  "@ethang/project-builder@1.1.42(chalk@5.3.0)(inquirer@9.3.4)(lodash@4.17.21)(rimraf@5.0.7)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)":
     dependencies:
       chalk: 5.3.0
-      inquirer: 9.3.1
+      inquirer: 9.3.4
       lodash: 4.17.21
       rimraf: 5.0.7
       simple-git: 3.25.0
-      tsup: 8.1.0(typescript@5.5.2)
-      typescript: 5.5.2
+      tsup: 8.1.0(typescript@5.5.3)
+      typescript: 5.5.3
 
   "@inquirer/figures@1.0.3": {}
 
@@ -1877,7 +1878,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer@9.3.1:
+  inquirer@9.3.4:
     dependencies:
       "@inquirer/figures": 1.0.3
       ansi-escapes: 4.3.2
@@ -1885,12 +1886,12 @@ snapshots:
       external-editor: 3.1.0
       mute-stream: 1.0.0
       ora: 5.4.1
-      picocolors: 1.0.1
       run-async: 3.0.0
       rxjs: 7.8.1
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
+      yoctocolors-cjs: 2.1.2
 
   is-binary-path@2.1.0:
     dependencies:
@@ -2002,8 +2003,6 @@ snapshots:
       minipass: 7.1.2
 
   path-type@4.0.0: {}
-
-  picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
 
@@ -2169,7 +2168,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.0(typescript@5.5.2):
+  tsup@8.1.0(typescript@5.5.3):
     dependencies:
       bundle-require: 4.2.1(esbuild@0.21.5)
       cac: 6.7.14
@@ -2186,14 +2185,14 @@ snapshots:
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      typescript: 5.5.2
+      typescript: 5.5.3
     transitivePeerDependencies:
       - supports-color
       - ts-node
 
   type-fest@0.21.3: {}
 
-  typescript@5.5.2: {}
+  typescript@5.5.3: {}
 
   util-deprecate@1.0.2: {}
 
@@ -2232,3 +2231,5 @@ snapshots:
       strip-ansi: 7.1.0
 
   yaml@2.4.5: {}
+
+  yoctocolors-cjs@2.1.2: {}
