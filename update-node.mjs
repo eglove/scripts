@@ -3,18 +3,9 @@ import { execSync } from "node:child_process";
 const inherit = { stdio: "inherit" };
 const getReturn = { encoding: "utf8" };
 
-const response = await fetch("https://nodejs.org/dist/index.json");
-const data = await response.json();
-
-const lts = data.find((item) => {
-  return item["lts"] !== false;
-});
-
-const version = lts.version;
-
-execSync(`fnm install ${version}`, inherit);
-execSync(`fnm default ${version}`, inherit);
-execSync(`fnm use ${version}`, inherit);
+execSync("fnm install lts-latest", inherit);
+execSync(`fnm default lts-latest`, inherit);
+execSync(`fnm use lts-latest`, inherit);
 
 const versions = execSync("fnm list", getReturn);
 
