@@ -9,10 +9,10 @@ importers:
     devDependencies:
       "@ethang/project-builder":
         specifier: ^1.1.43
-        version: 1.1.43(chalk@5.3.0)(inquirer@10.0.1)(lodash@4.17.21)(rimraf@6.0.0)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)
+        version: 1.1.43(chalk@5.3.0)(inquirer@10.0.1)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)
       prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
+        specifier: ^3.3.3
+        version: 3.3.3
 
 packages:
   "@esbuild/aix-ppc64@0.21.5":
@@ -355,10 +355,10 @@ packages:
       }
     engines: { node: ">=6.0.0" }
 
-  "@jridgewell/sourcemap-codec@1.4.15":
+  "@jridgewell/sourcemap-codec@1.5.0":
     resolution:
       {
-        integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==,
+        integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==,
       }
 
   "@jridgewell/trace-mapping@0.3.25":
@@ -923,12 +923,11 @@ packages:
         integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==,
       }
 
-  jackspeak@3.4.2:
+  jackspeak@3.4.3:
     resolution:
       {
-        integrity: sha512-qH3nOSj8q/8+Eg8LUPOq3C+6HWkpUioIjDsq1+D4zY91oZvpPttw8GwtF1nReRYKXl+1AORyFqtm2f5Q1SB6/Q==,
+        integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==,
       }
-    engines: { node: 14 >=14.21 || 16 >=16.20 || >=18 }
 
   jackspeak@4.0.1:
     resolution:
@@ -1154,10 +1153,10 @@ packages:
       ts-node:
         optional: true
 
-  prettier@3.3.2:
+  prettier@3.3.3:
     resolution:
       {
-        integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==,
+        integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==,
       }
     engines: { node: ">=14" }
     hasBin: true
@@ -1196,10 +1195,10 @@ packages:
       }
     engines: { iojs: ">=1.0.0", node: ">=0.10.0" }
 
-  rimraf@6.0.0:
+  rimraf@6.0.1:
     resolution:
       {
-        integrity: sha512-u+yqhM92LW+89cxUQK0SRyvXYQmyuKHx0jkx4W7KfwLGLqJnQM5031Uv1trE4gB9XEXBM/s6MxKlfW95IidqaA==,
+        integrity: sha512-9dkvaxAsk/xNXSJzMgFqqMCuFgt2+KsOFek3TMLfo8NCPfWpBmqwyNn5Y+NX56QUYfCtsyhF3ayiboEoUmJk/A==,
       }
     engines: { node: 20 || >=22 }
     hasBin: true
@@ -1548,12 +1547,12 @@ snapshots:
   "@esbuild/win32-x64@0.21.5":
     optional: true
 
-  "@ethang/project-builder@1.1.43(chalk@5.3.0)(inquirer@10.0.1)(lodash@4.17.21)(rimraf@6.0.0)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)":
+  "@ethang/project-builder@1.1.43(chalk@5.3.0)(inquirer@10.0.1)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.1.0(typescript@5.5.3))(typescript@5.5.3)":
     dependencies:
       chalk: 5.3.0
       inquirer: 10.0.1
       lodash: 4.17.21
-      rimraf: 6.0.0
+      rimraf: 6.0.1
       simple-git: 3.25.0
       tsup: 8.1.0(typescript@5.5.3)
       typescript: 5.5.3
@@ -1659,19 +1658,19 @@ snapshots:
   "@jridgewell/gen-mapping@0.3.5":
     dependencies:
       "@jridgewell/set-array": 1.2.1
-      "@jridgewell/sourcemap-codec": 1.4.15
+      "@jridgewell/sourcemap-codec": 1.5.0
       "@jridgewell/trace-mapping": 0.3.25
 
   "@jridgewell/resolve-uri@3.1.2": {}
 
   "@jridgewell/set-array@1.2.1": {}
 
-  "@jridgewell/sourcemap-codec@1.4.15": {}
+  "@jridgewell/sourcemap-codec@1.5.0": {}
 
   "@jridgewell/trace-mapping@0.3.25":
     dependencies:
       "@jridgewell/resolve-uri": 3.1.2
-      "@jridgewell/sourcemap-codec": 1.4.15
+      "@jridgewell/sourcemap-codec": 1.5.0
 
   "@kwsites/file-exists@1.1.1":
     dependencies:
@@ -1923,7 +1922,7 @@ snapshots:
   glob@10.4.5:
     dependencies:
       foreground-child: 3.2.1
-      jackspeak: 3.4.2
+      jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
@@ -1983,7 +1982,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jackspeak@3.4.2:
+  jackspeak@3.4.3:
     dependencies:
       "@isaacs/cliui": 8.0.2
     optionalDependencies:
@@ -2081,7 +2080,7 @@ snapshots:
       lilconfig: 3.1.2
       yaml: 2.4.5
 
-  prettier@3.3.2: {}
+  prettier@3.3.3: {}
 
   punycode@2.3.1: {}
 
@@ -2095,9 +2094,10 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  rimraf@6.0.0:
+  rimraf@6.0.1:
     dependencies:
       glob: 11.0.0
+      package-json-from-dist: 1.0.0
 
   rollup@4.18.1:
     dependencies:
