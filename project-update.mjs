@@ -10,7 +10,7 @@ const projects = [
   "hooks",
   "ethang-astro",
   "sterett-admin",
-  "sterett-qwik",
+  "sterett-react",
 ];
 
 for (const project of projects) {
