@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@ethang/project-builder":
-        specifier: ^1.1.47
-        version: 1.1.47(chalk@5.3.0)(inquirer@10.1.0)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.2.2(typescript@5.5.3)(yaml@2.4.5))(typescript@5.5.3)
+        specifier: ^1.1.48
+        version: 1.1.48(chalk@5.3.0)(inquirer@10.1.2)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.2.2(typescript@5.5.4)(yaml@2.4.5))(typescript@5.5.4)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -231,19 +231,19 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@ethang/project-builder@1.1.47":
+  "@ethang/project-builder@1.1.48":
     resolution:
       {
-        integrity: sha512-wVprpHTzH7RLcQiiuadRwsHVuwnbF02jK0NrLlnJ7nMSedh6Lml+chVhf6VL4SxzCWTKdLkB8+nsd304ci68oA==,
+        integrity: sha512-4SN4jm/m5axWqxZBtYabbNdvciedmBG16LjiZvdJpYsibWHADQvom12JhPMwHuJJZdgtuq+6krXZWtsph4OvlQ==,
       }
     peerDependencies:
       chalk: ^5.3.0
-      inquirer: ^10.1.0
+      inquirer: ^10.1.2
       lodash: ^4.17.21
       rimraf: ^6.0.1
       simple-git: ^3.25.0
       tsup: ^8.2.2
-      typescript: ^5.5.3
+      typescript: ^5.5.4
 
   "@inquirer/checkbox@2.4.2":
     resolution:
@@ -308,10 +308,10 @@ packages:
       }
     engines: { node: ">=18" }
 
-  "@inquirer/prompts@5.3.0":
+  "@inquirer/prompts@5.3.2":
     resolution:
       {
-        integrity: sha512-r12wsB23AFTEirWJY8TyMItyfgVB/lk8Hu8gwgOW2+4U5pkiBmUE3mkucz6BRQ2jbvg4jwpbyGSmJ5T/Wo2BRQ==,
+        integrity: sha512-8Jv+6rbY98ilFAZMYYfetu6XGXF/ZU44i5Z6Jx4t0xmwDh/AihdBV/FgetzDDZZMv5AMW1MT35LI0FiS55LoXw==,
       }
     engines: { node: ">=18" }
 
@@ -322,10 +322,10 @@ packages:
       }
     engines: { node: ">=18" }
 
-  "@inquirer/search@1.0.0":
+  "@inquirer/search@1.0.2":
     resolution:
       {
-        integrity: sha512-hDx//88Ry8UZSiIbJKLhZ93yVETrziKGhhsRr9x3zovqRcjBoNroVpSxTz4wVWfeaq7UWeRCSW5LfoKep5fiiw==,
+        integrity: sha512-E/JD3MeJwJeNilOnRDmHGnlUksyVqrTQEUNqkRpioj8J0sVxW7+pFRHBM2coFsiCpvI4XKRRhWsai5VP8rrfrQ==,
       }
     engines: { node: ">=18" }
 
@@ -891,10 +891,10 @@ packages:
       }
     engines: { node: ">= 4" }
 
-  inquirer@10.1.0:
+  inquirer@10.1.2:
     resolution:
       {
-        integrity: sha512-r298BBoEjWWJbu5LSFTU7Ob+KL3/g5xsGCwNLtSFuIKb6rGeRJMzAwNlcrrbomkxc6ryfRDj8aFV/QC3QZ9cLQ==,
+        integrity: sha512-rwoy4e2xFz3rru5Q5695rKXLbNlVfODRhRftBEPdxHfbGzN1T8Fxzszcb//SaRnQHsRdiwR8dOZOV+y4SoZ4KQ==,
       }
     engines: { node: ">=18" }
 
@@ -1442,10 +1442,10 @@ packages:
       }
     engines: { node: ">=10" }
 
-  typescript@5.5.3:
+  typescript@5.5.4:
     resolution:
       {
-        integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==,
+        integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==,
       }
     engines: { node: ">=14.17" }
     hasBin: true
@@ -1585,15 +1585,15 @@ snapshots:
   "@esbuild/win32-x64@0.23.0":
     optional: true
 
-  "@ethang/project-builder@1.1.47(chalk@5.3.0)(inquirer@10.1.0)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.2.2(typescript@5.5.3)(yaml@2.4.5))(typescript@5.5.3)":
+  "@ethang/project-builder@1.1.48(chalk@5.3.0)(inquirer@10.1.2)(lodash@4.17.21)(rimraf@6.0.1)(simple-git@3.25.0)(tsup@8.2.2(typescript@5.5.4)(yaml@2.4.5))(typescript@5.5.4)":
     dependencies:
       chalk: 5.3.0
-      inquirer: 10.1.0
+      inquirer: 10.1.2
       lodash: 4.17.21
       rimraf: 6.0.1
       simple-git: 3.25.0
-      tsup: 8.2.2(typescript@5.5.3)(yaml@2.4.5)
-      typescript: 5.5.3
+      tsup: 8.2.2(typescript@5.5.4)(yaml@2.4.5)
+      typescript: 5.5.4
 
   "@inquirer/checkbox@2.4.2":
     dependencies:
@@ -1654,7 +1654,7 @@ snapshots:
       "@inquirer/type": 1.5.1
       ansi-escapes: 4.3.2
 
-  "@inquirer/prompts@5.3.0":
+  "@inquirer/prompts@5.3.2":
     dependencies:
       "@inquirer/checkbox": 2.4.2
       "@inquirer/confirm": 3.1.17
@@ -1664,7 +1664,7 @@ snapshots:
       "@inquirer/number": 1.0.5
       "@inquirer/password": 2.1.17
       "@inquirer/rawlist": 2.1.17
-      "@inquirer/search": 1.0.0
+      "@inquirer/search": 1.0.2
       "@inquirer/select": 2.4.2
 
   "@inquirer/rawlist@2.1.17":
@@ -1673,7 +1673,7 @@ snapshots:
       "@inquirer/type": 1.5.1
       yoctocolors-cjs: 2.1.2
 
-  "@inquirer/search@1.0.0":
+  "@inquirer/search@1.0.2":
     dependencies:
       "@inquirer/core": 9.0.5
       "@inquirer/figures": 1.0.5
@@ -2003,9 +2003,9 @@ snapshots:
 
   ignore@5.3.1: {}
 
-  inquirer@10.1.0:
+  inquirer@10.1.2:
     dependencies:
-      "@inquirer/prompts": 5.3.0
+      "@inquirer/prompts": 5.3.2
       "@inquirer/type": 1.5.1
       "@types/mute-stream": 0.0.4
       ansi-escapes: 4.3.2
@@ -2267,7 +2267,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.2.2(typescript@5.5.3)(yaml@2.4.5):
+  tsup@8.2.2(typescript@5.5.4)(yaml@2.4.5):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -2286,7 +2286,7 @@ snapshots:
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      typescript: 5.5.3
+      typescript: 5.5.4
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -2295,7 +2295,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  typescript@5.5.3: {}
+  typescript@5.5.4: {}
 
   undici-types@5.26.5: {}
 
