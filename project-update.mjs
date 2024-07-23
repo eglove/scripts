@@ -3,9 +3,9 @@ import { execSync } from "node:child_process";
 const projectPrefix = "/Users/hello/Projects/ethang";
 
 const projects = [
+  "eslint-config-ethang",
   "project-builder",
   "scripts",
-  "eslint-config-ethang",
   "toolbelt",
   "hooks",
   "ethang-astro",
