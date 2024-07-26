@@ -11,7 +11,7 @@
     "build": "node build.mjs"
   },
   "devDependencies": {
-    "@ethang/project-builder": "^1.1.48",
+    "@ethang/project-builder": "^1.1.49",
     "prettier": "^3.3.3"
   }
 }
