@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@ethang/project-builder":
-        specifier: ^1.1.53
-        version: 1.1.53(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@10.1.6)(lodash@4.17.21)(simple-git@3.25.0)(tsup@8.2.4(typescript@5.5.4)(yaml@2.5.0))(typescript@5.5.4)
+        specifier: ^1.1.54
+        version: 1.1.54(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@10.1.6)(lodash@4.17.21)(simple-git@3.25.0)(tsup@8.2.4(typescript@5.5.4)(yaml@2.5.0))(typescript@5.5.4)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -231,10 +231,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@ethang/project-builder@1.1.53":
+  "@ethang/project-builder@1.1.54":
     resolution:
       {
-        integrity: sha512-5bCn1gq2T9VLXEfovX1z0W7+wqaiGf9JfDFPV7gCfeHTes9VXEmdwvdH1WSunmx24d7oCPURTftCE4ytRuA6Yg==,
+        integrity: sha512-cYea07XTfB0G10MahICgJPE+9yvFj8D1LK/qe09e2o7sdr6+LuJja1pnAbVGvca9XGAyTFDtUtdeKPP4mm0UHA==,
       }
     peerDependencies:
       chalk: ^5.3.0
@@ -1567,7 +1567,7 @@ snapshots:
   "@esbuild/win32-x64@0.23.0":
     optional: true
 
-  "@ethang/project-builder@1.1.53(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@10.1.6)(lodash@4.17.21)(simple-git@3.25.0)(tsup@8.2.4(typescript@5.5.4)(yaml@2.5.0))(typescript@5.5.4)":
+  "@ethang/project-builder@1.1.54(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@10.1.6)(lodash@4.17.21)(simple-git@3.25.0)(tsup@8.2.4(typescript@5.5.4)(yaml@2.5.0))(typescript@5.5.4)":
     dependencies:
       chalk: 5.3.0
       fs-extra: 11.2.0
