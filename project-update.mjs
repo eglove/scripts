@@ -4,6 +4,8 @@ const projectPrefix = "/Users/hello/Projects/ethang";
 
 const projects = [
   "eslint-config-ethang",
+  "eslint-config-ethang-astro",
+  "eslint-config-ethang-react",
   "project-builder",
   "scripts",
   "toolbelt",
