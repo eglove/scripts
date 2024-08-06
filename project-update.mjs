@@ -1,6 +1,6 @@
 import { execSync } from "node:child_process";
 
-const projectPrefix = "~/projects";
+const projectPrefix = "/Users/glove/projects";
 
 const projects = [
   "eslint-config-ethang",

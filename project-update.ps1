@@ -1,4 +1,4 @@
 $currentLocation = Get-Location
-Set-Location ~/Projects/ethang/scripts
+Set-Location ~/projects/scripts
 node project-update.mjs
 Set-Location $currentLocation
