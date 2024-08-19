@@ -8,7 +8,7 @@ const projects = [
   "scripts",
   "toolbelt",
   "hooks",
-  "ethang-astro",
+  "ethang-profile",
   "sterett-admin",
   "sterett-react",
 ];
