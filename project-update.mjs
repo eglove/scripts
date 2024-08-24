@@ -5,6 +5,7 @@ const projectPrefix = "/Users/glove/projects";
 const projects = [
   "eslint-config-ethang",
   "project-builder",
+  "markdown-generator",
   "scripts",
   "toolbelt",
   "hooks",
