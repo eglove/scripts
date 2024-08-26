@@ -2,13 +2,13 @@
   "name": "scripts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
+  "main": "index.js",
   "scripts": {
-    "lint": "prettier . --write",
-    "build": "node build.mjs"
+    "build": "node build.mjs",
+    "lint": "prettier . --write"
   },
   "devDependencies": {
     "@ethang/project-builder": "^2.4.0",
