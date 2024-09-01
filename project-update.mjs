@@ -15,16 +15,19 @@ const projects = [
   "sterett-react",
 ];
 
+let failedProjects = [];
+
 for (const project of projects) {
   try {
     execSync(`cd ${projectPrefix}/${project} && node build.mjs`, {
       stdio: "inherit",
     });
   } catch (error) {
-    // Move on to next project
-    console.error(error);
+    failedProjects.push(project);
   }
 }
+
+console.error('Failed:', failedProjects.join(', '));
 
 execSync("pnpm store prune", {
   stdio: "inherit",
