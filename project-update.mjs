@@ -27,7 +27,7 @@ for (const project of projects) {
   }
 }
 
-console.error('Failed:', failedProjects.join(', '));
+console.error("Failed:", failedProjects.join(", "));
 
 execSync("pnpm store prune", {
   stdio: "inherit",
