@@ -16,9 +16,14 @@ const projects = [
 ];
 
 for (const project of projects) {
-  execSync(`cd ${projectPrefix}/${project} && node build.mjs`, {
-    stdio: "inherit",
-  });
+  try {
+    execSync(`cd ${projectPrefix}/${project} && node build.mjs`, {
+      stdio: "inherit",
+    });
+  } catch (error) {
+    // Move on to next project
+    console.error(error);
+  }
 }
 
 execSync("pnpm store prune", {
