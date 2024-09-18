@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@ethang/project-builder":
-        specifier: ^2.5.11
-        version: 2.5.11(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@11.0.1)(lodash@4.17.21)(simple-git@3.26.0)(tsup@8.2.4(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)
+        specifier: ^2.6.0
+        version: 2.6.0(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@11.0.2)(lodash@4.17.21)(simple-git@3.26.0)(sort-package-json@2.10.1)(tsup@8.3.0(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -231,18 +231,19 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@ethang/project-builder@2.5.11":
+  "@ethang/project-builder@2.6.0":
     resolution:
       {
-        integrity: sha512-nrITmBC8GQOSZa/5tHfvk6j6alOMcuYLQ5uxH/8FU38AEvNHCG8pxXLGmxbhOdbEXhrVjw0/Uwkp96Wo1usrQw==,
+        integrity: sha512-R2UJppjAZxOPkwmqZgdYBWWFCwE2FZYAFEAUvvX0nboB5w9arfgOxXI1YrG5eRS/7hQvN2CQIJWp7R1Dwq13bA==,
       }
     peerDependencies:
       chalk: ^5.3.0
       fs-extra: ^11.2.0
-      inquirer: ^11.0.1
+      inquirer: ^11.0.2
       lodash: ^4.17.21
       simple-git: ^3.26.0
-      tsup: ^8.2.4
+      sort-package-json: ^2.10.1
+      tsup: ^8.3.0
       typescript: ^5.6.2
 
   "@inquirer/checkbox@3.0.1":
@@ -623,13 +624,6 @@ packages:
       }
     engines: { node: ">= 8" }
 
-  array-union@2.1.0:
-    resolution:
-      {
-        integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==,
-      }
-    engines: { node: ">=8" }
-
   balanced-match@1.0.2:
     resolution:
       {
@@ -745,6 +739,20 @@ packages:
       supports-color:
         optional: true
 
+  detect-indent@7.0.1:
+    resolution:
+      {
+        integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==,
+      }
+    engines: { node: ">=12.20" }
+
+  detect-newline@4.0.1:
+    resolution:
+      {
+        integrity: sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==,
+      }
+    engines: { node: ^12.20.0 || ^14.13.1 || >=16.0.0 }
+
   dir-glob@3.0.1:
     resolution:
       {
@@ -805,6 +813,17 @@ packages:
         integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==,
       }
 
+  fdir@6.3.0:
+    resolution:
+      {
+        integrity: sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==,
+      }
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   fill-range@7.1.1:
     resolution:
       {
@@ -834,12 +853,25 @@ packages:
     engines: { node: ^8.16.0 || ^10.6.0 || >=11.0.0 }
     os: [darwin]
 
+  get-stdin@9.0.0:
+    resolution:
+      {
+        integrity: sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==,
+      }
+    engines: { node: ">=12" }
+
   get-stream@6.0.1:
     resolution:
       {
         integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==,
       }
     engines: { node: ">=10" }
+
+  git-hooks-list@3.1.0:
+    resolution:
+      {
+        integrity: sha512-LF8VeHeR7v+wAbXqfgRlTSX/1BJR9Q1vEMR8JAz1cEg6GX07+zyj3sAdDvYjj/xnlIfVuGgj4qBei1K3hKH+PA==,
+      }
 
   glob-parent@5.1.2:
     resolution:
@@ -855,12 +887,12 @@ packages:
       }
     hasBin: true
 
-  globby@11.1.0:
+  globby@13.2.2:
     resolution:
       {
-        integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==,
+        integrity: sha512-Y1zNGV+pzQdh7H39l9zgB4PJqjRNqydvdYCDG4HFXM4XuvSaQQlEc91IU1yALL8gUTDomgBAfz3XJdmUS+oo0w==,
       }
-    engines: { node: ">=10" }
+    engines: { node: ^12.20.0 || ^14.13.1 || >=16.0.0 }
 
   graceful-fs@4.2.11:
     resolution:
@@ -889,10 +921,10 @@ packages:
       }
     engines: { node: ">= 4" }
 
-  inquirer@11.0.1:
+  inquirer@11.0.2:
     resolution:
       {
-        integrity: sha512-G+GdcKg7AaWER6H3UuccHkDZSJYxE1x12V2AbmJQNY5/WYSBVEDip1nDy0yoQQz21Qm+CscYEXw09lG6OGqTeA==,
+        integrity: sha512-pnbn3nL+JFrTw/pLhzyE/IQ3+gA3n5JxTAZQDjB6qu4gbjOaiTnpZbxT6HY2DDCT7bzDjTTsd3snRP+B6N//Pg==,
       }
     engines: { node: ">=18" }
 
@@ -930,6 +962,13 @@ packages:
         integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==,
       }
     engines: { node: ">=0.12.0" }
+
+  is-plain-obj@4.1.0:
+    resolution:
+      {
+        integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==,
+      }
+    engines: { node: ">=12" }
 
   is-stream@2.0.1:
     resolution:
@@ -1136,6 +1175,13 @@ packages:
       }
     engines: { node: ">=8.6" }
 
+  picomatch@4.0.2:
+    resolution:
+      {
+        integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==,
+      }
+    engines: { node: ">=12" }
+
   pirates@4.0.6:
     resolution:
       {
@@ -1239,6 +1285,14 @@ packages:
         integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==,
       }
 
+  semver@7.6.3:
+    resolution:
+      {
+        integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==,
+      }
+    engines: { node: ">=10" }
+    hasBin: true
+
   shebang-command@2.0.0:
     resolution:
       {
@@ -1272,12 +1326,25 @@ packages:
         integrity: sha512-5tbkCSzuskR6uA7uA23yjasmA0RzugVo8QM2bpsnxkrgP13eisFT7TMS4a+xKEJvbmr4qf+l0WT3eKa9IxxUyw==,
       }
 
-  slash@3.0.0:
+  slash@4.0.0:
     resolution:
       {
-        integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==,
+        integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==,
       }
-    engines: { node: ">=8" }
+    engines: { node: ">=12" }
+
+  sort-object-keys@1.1.3:
+    resolution:
+      {
+        integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==,
+      }
+
+  sort-package-json@2.10.1:
+    resolution:
+      {
+        integrity: sha512-d76wfhgUuGypKqY72Unm5LFnMpACbdxXsLPcL27pOsSrmVqH3PztFp1uq+Z22suk15h7vXmTesuh2aEjdCqb5w==,
+      }
+    hasBin: true
 
   source-map@0.8.0-beta.0:
     resolution:
@@ -1342,6 +1409,13 @@ packages:
         integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==,
       }
 
+  tinyglobby@0.2.6:
+    resolution:
+      {
+        integrity: sha512-NbBoFBpqfcgd1tCiO8Lkfdk+xrA7mlLR9zgvZcZWQQwU63XAfUePyd6wZBaU93Hqw347lHnwFzttAkemHzzz4g==,
+      }
+    engines: { node: ">=12.0.0" }
+
   tmp@0.0.33:
     resolution:
       {
@@ -1381,10 +1455,10 @@ packages:
         integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==,
       }
 
-  tsup@8.2.4:
+  tsup@8.3.0:
     resolution:
       {
-        integrity: sha512-akpCPePnBnC/CXgRrcy72ZSntgIEUa1jN0oJbbvpALWKNOz1B7aM+UVDWGRGIO/T/PZugAESWDJUAb5FD48o8Q==,
+        integrity: sha512-ALscEeyS03IomcuNdFdc0YWGVIkwH1Ws7nfTbAPuoILvEV2hpGQAY72LIOjglGo4ShWpZfpBqP/jpQVCzqYQag==,
       }
     engines: { node: ">=18" }
     hasBin: true
@@ -1560,14 +1634,15 @@ snapshots:
   "@esbuild/win32-x64@0.23.1":
     optional: true
 
-  "@ethang/project-builder@2.5.11(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@11.0.1)(lodash@4.17.21)(simple-git@3.26.0)(tsup@8.2.4(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)":
+  "@ethang/project-builder@2.6.0(chalk@5.3.0)(fs-extra@11.2.0)(inquirer@11.0.2)(lodash@4.17.21)(simple-git@3.26.0)(sort-package-json@2.10.1)(tsup@8.3.0(typescript@5.6.2)(yaml@2.5.1))(typescript@5.6.2)":
     dependencies:
       chalk: 5.3.0
       fs-extra: 11.2.0
-      inquirer: 11.0.1
+      inquirer: 11.0.2
       lodash: 4.17.21
       simple-git: 3.26.0
-      tsup: 8.2.4(typescript@5.6.2)(yaml@2.5.1)
+      sort-package-json: 2.10.1
+      tsup: 8.3.0(typescript@5.6.2)(yaml@2.5.1)
       typescript: 5.6.2
 
   "@inquirer/checkbox@3.0.1":
@@ -1796,8 +1871,6 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  array-union@2.1.0: {}
-
   balanced-match@1.0.2: {}
 
   binary-extensions@2.3.0: {}
@@ -1854,6 +1927,10 @@ snapshots:
   debug@4.3.7:
     dependencies:
       ms: 2.1.3
+
+  detect-indent@7.0.1: {}
+
+  detect-newline@4.0.1: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -1922,6 +1999,10 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
+  fdir@6.3.0(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -1940,7 +2021,11 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  get-stdin@9.0.0: {}
+
   get-stream@6.0.1: {}
+
+  git-hooks-list@3.1.0: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -1955,14 +2040,13 @@ snapshots:
       package-json-from-dist: 1.0.0
       path-scurry: 1.11.1
 
-  globby@11.1.0:
+  globby@13.2.2:
     dependencies:
-      array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.2
       ignore: 5.3.2
       merge2: 1.4.1
-      slash: 3.0.0
+      slash: 4.0.0
 
   graceful-fs@4.2.11: {}
 
@@ -1974,7 +2058,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  inquirer@11.0.1:
+  inquirer@11.0.2:
     dependencies:
       "@inquirer/core": 9.2.1
       "@inquirer/prompts": 6.0.1
@@ -1998,6 +2082,8 @@ snapshots:
       is-extglob: 2.1.1
 
   is-number@7.0.0: {}
+
+  is-plain-obj@4.1.0: {}
 
   is-stream@2.0.1: {}
 
@@ -2085,6 +2171,8 @@ snapshots:
 
   picomatch@2.3.1: {}
 
+  picomatch@4.0.2: {}
+
   pirates@4.0.6: {}
 
   postcss-load-config@6.0.1(yaml@2.5.1):
@@ -2141,6 +2229,8 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+  semver@7.6.3: {}
+
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
@@ -2159,7 +2249,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  slash@3.0.0: {}
+  slash@4.0.0: {}
+
+  sort-object-keys@1.1.3: {}
+
+  sort-package-json@2.10.1:
+    dependencies:
+      detect-indent: 7.0.1
+      detect-newline: 4.0.1
+      get-stdin: 9.0.0
+      git-hooks-list: 3.1.0
+      globby: 13.2.2
+      is-plain-obj: 4.1.0
+      semver: 7.6.3
+      sort-object-keys: 1.1.3
 
   source-map@0.8.0-beta.0:
     dependencies:
@@ -2205,6 +2308,11 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
+  tinyglobby@0.2.6:
+    dependencies:
+      fdir: 6.3.0(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   tmp@0.0.33:
     dependencies:
       os-tmpdir: 1.0.2
@@ -2223,7 +2331,7 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  tsup@8.2.4(typescript@5.6.2)(yaml@2.5.1):
+  tsup@8.3.0(typescript@5.6.2)(yaml@2.5.1):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -2232,7 +2340,6 @@ snapshots:
       debug: 4.3.7
       esbuild: 0.23.1
       execa: 5.1.1
-      globby: 11.1.0
       joycon: 3.1.1
       picocolors: 1.1.0
       postcss-load-config: 6.0.1(yaml@2.5.1)
@@ -2240,6 +2347,7 @@ snapshots:
       rollup: 4.21.3
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
+      tinyglobby: 0.2.6
       tree-kill: 1.2.2
     optionalDependencies:
       typescript: 5.6.2
