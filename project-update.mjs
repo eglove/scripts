@@ -3,10 +3,10 @@ import { execSync } from "node:child_process";
 const projectPrefix = "/Users/glove/projects";
 
 const projects = [
-  "eslint-plugin",
   "eslint-config-ethang",
   "project-builder",
   "markdown-generator",
+  "store",
   "scripts",
   "toolbelt",
   "hooks",
