@@ -31,3 +31,6 @@ if (failedProjects.length > 0) {
   console.error("Failed:", failedProjects.join(", "));
 }
 
+execSync("pnpm store prune", {
+  stdio: "inherit",
+});
