@@ -11,7 +11,7 @@
     "lint": "prettier . --write"
   },
   "devDependencies": {
-    "@ethang/project-builder": "^3.0.0",
+    "@ethang/project-builder": "^3.0.1",
     "prettier": "^3.3.3"
   }
 }
