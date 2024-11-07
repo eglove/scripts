@@ -6,7 +6,6 @@ const projects = [
   "eslint-config-ethang",
   "project-builder",
   "markdown-generator",
-  "react-components",
   "store",
   "scripts",
   "toolbelt",
